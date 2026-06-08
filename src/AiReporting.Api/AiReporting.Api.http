@@ -1,0 +1,15 @@
+@AiReporting.Api_HostAddress = http://localhost:5182
+
+# Requires OpenAI:ApiKey, preferably set with:
+# dotnet user-secrets set "OpenAI:ApiKey" "YOUR_KEY" --project src/AiReporting.Api
+
+POST {{AiReporting.Api_HostAddress}}/api/ai-reports/generate
+Content-Type: application/json
+
+{
+  "prompt": "Generate a monthly minor sales report for the previous year and predict next year sales"
+}
+
+Accept: application/json
+
+###
